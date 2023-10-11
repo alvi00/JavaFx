@@ -1,5 +1,6 @@
 package application;
-	
+
+// Import necessary JavaFX classes
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Group;
@@ -9,28 +10,53 @@ import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
-
+// Define your main application class
 public class Main extends Application {
-	@Override
-	public void start(Stage stage) {
-		Group node=new Group();
-		Scene scene=new Scene(node,Color.LAVENDER);
-		stage.setScene(scene);
-		stage.setTitle("alvi is a good boy");
-		Image icon=new Image("My project (2).png");
-		stage.getIcons().add(icon);
-		stage.setWidth(430);
-		stage.setHeight(430);
-		stage.setResizable(false);
-//		stage.setX(100);
-//		stage.setY(100);
-		stage.setFullScreen(true);
-		stage.setFullScreenExitHint("alvi");
-		stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("r"));
-		stage.show();
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
-	}
+    @Override
+    public void start(Stage stage) {
+        // Create a group to hold your application content
+        Group node = new Group();
+
+        // Create a scene with a lavender background
+        Scene scene = new Scene(node, Color.LAVENDER);
+
+        // Set the scene for the stage
+        stage.setScene(scene);
+
+        // Set the title of the application window
+        stage.setTitle("alvi is a good boy");
+
+        // Load an icon for the application window
+	//My project (2).png is my image name which i copied to my src folder
+        Image icon = new Image("My project (2).png");
+        stage.getIcons().add(icon);
+
+        // Set the initial width and height of the application window
+        stage.setWidth(430);
+        stage.setHeight(430);
+
+        // Disable window resizing
+        stage.setResizable(false);
+
+        // Uncomment these lines if you want to set an initial position for the window
+        // stage.setX(100);
+        // stage.setY(100);
+
+        // Enable full-screen mode for the application
+        stage.setFullScreen(true);
+
+        // Set a hint to display when exiting full-screen mode
+        stage.setFullScreenExitHint("alvi");
+
+        // Define the key combination to exit full-screen mode (in this case, pressing 'r')
+        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("r"));
+
+        // Show the application window
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        // Launch the JavaFX application
+        launch(args);
+    }
 }
