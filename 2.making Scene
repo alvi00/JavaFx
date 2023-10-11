@@ -1,0 +1,78 @@
+package application;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) {
+        // Create a root node to hold all the graphical elements
+        Group node = new Group();
+
+        // Create a scene with specified dimensions and background color
+        Scene scene = new Scene(node, 1300, 600, Color.AQUAMARINE);
+
+        // Create and configure a Text element
+        Text text = new Text("alvi is a good boy");
+        text.setX(100);
+        text.setY(100);
+        text.setFont(Font.font("affirmative", 50));
+        text.setFill(Color.DARKGREEN);
+
+        // Create and configure a Line element
+        Line line = new Line(200, 200, 400, 400);
+        line.setStrokeWidth(5);
+        line.setOpacity(0.3);
+        line.setStroke(Color.RED);
+        line.setRotate(-45);
+
+        // Create and configure a Rectangle element
+        Rectangle rectangle = new Rectangle(100, 100);
+        rectangle.setX(100);
+        rectangle.setY(100);
+        rectangle.setFill(Color.LIGHTBLUE);
+        rectangle.setStrokeWidth(5);
+        rectangle.setStroke(Color.ALICEBLUE);
+
+        // Create and configure a Polygon (triangle)
+        Polygon triangle = new Polygon(200, 300, 300, 300, 300, 200);
+        triangle.setFill(Color.GREEN);
+
+        // Create and configure a Circle element
+        Circle circle = new Circle(400, 200, 100);
+        circle.setStrokeWidth(5);
+        circle.setStroke(Color.BLACK);
+        circle.setFill(Color.BLANCHEDALMOND);
+
+        // Load an image and display it using an ImageView
+        Image image = new Image("alvi.jpg");
+        ImageView imageView = new ImageView(image);
+        imageView.setX(500);
+        imageView.setY(600); // Note the correction from "x" to "y" for vertical positioning
+
+        // Add all graphical elements to the root node
+        node.getChildren().addAll(text, line, rectangle, triangle, circle, imageView);
+
+        // Set the scene and display the stage
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        // Launch the JavaFX application
+        launch(args);
+    }
+}
