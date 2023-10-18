@@ -14,8 +14,10 @@ public class Controllerscene1 {
 	
 	public void date() {
 			
+					
 		LocalDate mydate=datepicker.getValue();
-		label.setText(mydate.toString());
+		String myFormattedDate = mydate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+		label.setText(myFormattedDate.toString());
 	}
 	
 }
