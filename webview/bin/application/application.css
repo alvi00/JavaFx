@@ -1,0 +1,16 @@
+
+/* Add a hover effect */
+.button:hover {
+    -fx-background-color: #45A049; /* Change the background color on hover */
+    -fx-cursor: hand; /* Show a hand cursor on hover */
+}
+
+/* Add a pressed effect */
+.button:pressed {
+    -fx-background-color: #388E3C; /* Change the background color when pressed */
+}
+
+/* Disable the focus ring (outline) on the button */
+.button:focused {
+    -fx-border-color: transparent;
+}
